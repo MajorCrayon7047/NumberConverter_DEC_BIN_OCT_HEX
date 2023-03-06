@@ -3,9 +3,11 @@ from conversorClass import Conversor
 c = Conversor()     #Creo una instancia del objeto conversor
 
 Referencia = {"hex":16, "h":16, "bin":2, "b":2, "dec":10, "d":10, "oct":8, "o":8}
+Referencia2 = {"dec":"d", "bin":"b", "oct":"o", "hex":"h"}
 
 while True:
     n = input('En que base esta el numero?\nDEC(d), BIN(b), OCT(o) y HEX(h): ').lower()
+    if n in Referencia2: n = Referencia2[n]
     try:
         match n:
             case "d":
